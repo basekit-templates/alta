@@ -1,0 +1,69 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+
+<!-- Navigation Container -->
+<div class="template-feature  nav-effect--container  home-page">
+
+
+    <!-- Feature Containers -->
+    <div class="template-feature--container  nav-effect--transform">
+        <div class="template-feature--wrapper  nav-effect--wrapper">
+
+
+            <!-- Feature Widget -->
+            {{widget('feature', 'header-feature', {
+                "header": "profile",
+                'positionTopPercentage': '0',
+                'showBtn': true,
+                buttonText: "Lorem Ipsum"
+            })|raw}}
+
+
+            <!-- Slideshow Widget -->
+            {{widget('responsiveslideshow', 'slideshow', {
+                'duration':'5',
+                'transSpeed': '800',
+                'transType': 'fade',
+                'showButtons': false,
+                'showBullets': true,
+                'allowPause': false,
+                'allowLoop': false,
+                'crop': true,
+                'images':[
+            {
+                'imageHeight':'auto',
+                'imageWidth':'100%',
+                'url':asset('images/slideshow-1.jpg')
+            }
+
+            ]})|raw}}
+
+
+            <!-- Header -->
+            {% include "includes/header.twig" %}
+
+
+        </div>
+    </div>
+
+
+    <!-- Navigation -->
+    {{widget('extendednavigation', 'navigation', {'align': 'center'})|raw}}
+
+</div>
+
+
+<div role="main">
+
+    <!-- Main Zone -->
+    {{zone('main')|raw}}
+
+</div>
+
+
+<!-- Footer -->
+{% include "includes/footer.twig" %}
+
+
+{% endblock %}
