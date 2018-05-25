@@ -76,29 +76,51 @@
 
 // Fix for full slideshow height in the editor on touch devices
 .touch {
-    
-    
+
+
     .template-feature .responsiveslideshow__figure {
-       
+
         @media @tablet-860px {
             height: 800px;
         }
-        
+
         @media @mobile-650px {
             height: 600px;
         }
     }
-    
+
     .site-container  {
-        
+
         @media @mobile-650px {
             max-height: 600px;
         }
-        
+
         @media @tablet-860px {
             max-height: 800px;
         }
     }
+}
+
+
+// GDPR updates
+.gdpr-footer {
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0, 0.05);
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+
+
+    &__link {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+
+.advancedcontactform__form-group--terms label {
+    letter-spacing: 0;
 }
 
 
@@ -299,7 +321,7 @@ body {
 
 
 // Main zone wrapper
-[role="main"],
+[role="main"] #page-zones__main >,
 .blog-page .bk-zone,
 .blog-list-page .bk-zone,
 .ecom-page .bk-zone,
@@ -331,7 +353,8 @@ body {
             margin-top: 60px;
 
             @media @mobile-650px {
-                margin-top: 40px;
+                margin: 25px 0 0;
+                padding: 0 30px;
             }
         }
 
