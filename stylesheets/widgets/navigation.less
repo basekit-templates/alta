@@ -12,7 +12,7 @@
 // Positions navigation to the right of the feature and vertically center to the page
 [data-widget-type="extendednavigation"] {
     height: 100%;
-    overflow: scroll;
+    overflow: hidden;
 
     .flex-display(flex);
     .justify-content(flex-end);
@@ -36,6 +36,8 @@
 
 // Readds scroll to make sure navigation isn't cut off when longer than the viewport
 .animate [data-widget-type="extendednavigation"] {
+    overflow: auto;
+    
     @media @tablet-860px {
         overflow-y: scroll!important;
     }
