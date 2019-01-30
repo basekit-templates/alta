@@ -4,6 +4,19 @@
 // -----------------------------
 
 
+.home-page {
+    @media @mobile {
+        overflow-y: hidden;
+    }
+}
+
+.animate .home-page {
+    @media @mobile {
+        overflow: visible;
+    }
+}
+
+
 // Adds flexbox to feature wrapper
 .home-page .template-feature--wrapper {
     .flex-display;
