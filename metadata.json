@@ -4,6 +4,7 @@
     "thumbnail":"alta.png",
     "templateType":"standard",
     "pageTypes": ["home"],
+    "versionTenCompatible": 1,
     "screenshot":"alta-screenshot.jpg",
      "images":[
          "images/slideshow-1.jpg"

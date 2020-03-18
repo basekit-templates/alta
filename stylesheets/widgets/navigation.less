@@ -227,7 +227,7 @@
     right: 30px;
     text-indent: -9999px;
     top: 28px;
-    z-index: 10;
+    z-index: 3;
     .transition(background-color 0.35s ease-in);
 
     @media @tablet-860px {
@@ -310,7 +310,7 @@
 .animate .navigation-toggle {
     background-color: transparent;
     .transition(background-color 0s ease-out);
-    z-index: 99999;
+    z-index: 3;
 
 
     // Icon top bar
@@ -365,6 +365,10 @@
 .template-feature {
     height: 100%;
     width: 100%;
+
+    #migrated-site.edit & {
+        height: auto;
+    }
 }
 
 
@@ -380,7 +384,7 @@
         min-height: 100%;
         height: 100%;
         position: relative;
-        z-index: 10;
+        z-index: 1;
 
         -webkit-transition: -webkit-transform 0.4s;
         transition: -webkit-transform 0.4s;
@@ -499,12 +503,12 @@
 //  Hide Navigation Overlay
 // --------------------------
 
-[data-widget-type="extendednavigation"] .widget-overlay,
-[data-widget-type="extendednavigation"] .widget-overlay ul.widget__list.list--options {
+body:not(#migrated-site) [data-widget-type="extendednavigation"] .widget-overlay,
+body:not(#migrated-site) [data-widget-type="extendednavigation"] .widget-overlay ul.widget__list.list--options {
     display: none!important;
 }
 
-.animate [data-widget-type="extendednavigation"] .widget-overlay {
+body:not(#migrated-site) .animate [data-widget-type="extendednavigation"] .widget-overlay {
     display: block!important;
 }
 
