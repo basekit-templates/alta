@@ -28,7 +28,7 @@
 // ------------------
 
 @import "@{templateCommon}/bk-less-framework-v8.less";                      // V8 Framework
-@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700');
+
 
 
 // Base Styles
@@ -140,7 +140,7 @@
     .align-items(center);
     .justify-content(space-between);
     margin: 0;
-    padding: 30px 85px 35px 30px;
+    padding: 30px 85px 30px 40px;
     position: relative;
     z-index: 2;
 
@@ -166,7 +166,7 @@
         .align-items(center);
         .justify-content(center);
         max-width: 39%;
-        text-align: center;
+        text-align: left;
         width: 100%;
 
         @media only screen and (max-width: 1500px) {
@@ -198,8 +198,8 @@
         }
 
 
-        // Add spacing betweent logo and company name
-        .widget:first-child {
+        // Add spacing between logo and company name
+        .widget:not([data-widget-type="companyname"]):first-child {
             margin-bottom: 6px;
 
             @media @mobile-860px {
@@ -208,7 +208,7 @@
         }
 
 
-        // Stop logo becomign to large
+        // Stop logo becoming to large
         .logo-image {
             max-height: 180px;
 
@@ -221,6 +221,11 @@
             }
         }
     }
+}
+
+
+.home-page .template-header--brand {
+    text-align: center;
 }
 
 
@@ -286,12 +291,7 @@ body {
 // Body background colour
 body {
     background-color: @color__body--background;
-    height: calc(100% + 1px)!important;
-
-
-    &.edit {
-        height: 100!important;
-    }
+    height: calc(100% + 1px);
 
 
     &.basket-open {
@@ -327,7 +327,7 @@ body {
 
 
 // Main zone wrapper
-[role="main"] #page-zones__main >,
+[role="main"] #page-zones__main,
 .blog-page .bk-zone,
 .blog-list-page .bk-zone,
 .ecom-page .bk-zone,
@@ -346,7 +346,7 @@ body {
 
     .row-editing & {
         background-color: transparent;
-        box-shadow: z;
+        box-shadow: none;
     }
 
 
@@ -356,7 +356,7 @@ body {
 
 
     // Default widget spacing
-    .widget {
+    > .widget {
         margin: 0 auto 80px;
         max-width: 1000px;
         padding: 0 30px;
