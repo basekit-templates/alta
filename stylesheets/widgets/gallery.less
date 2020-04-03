@@ -17,8 +17,7 @@
 // ------------------------------
 
 
-.gallery__gallery-item,
-#migrated-site [data-name="row"] .row [data-name="gallery"] .gallery__gallery-item {
+.gallery__gallery-item {
     float: left;
     height: 0; // Height is achieved using padding-bottom
     margin: 0;
@@ -88,8 +87,7 @@
 // Gallery Figure
 // ------------------------------
 
-.gallery__figure,
-#migrated-site [data-name="row"] .row [data-name="gallery"] .gallery__figure {
+.gallery__figure {
     .flex-display;
     position: absolute;
     top: -1px;
@@ -109,8 +107,7 @@
 // ------------------------------
 
 
-.gallery__caption,
-#migrated-site [data-name="row"] .row [data-name="gallery"] .gallery__caption {
+.gallery__caption {
     outline: 1px solid @color__gallery-caption--background;
     margin: 0;
     opacity: 1;
@@ -129,8 +126,7 @@
 // ------------------------------
 
 
-.gallery__image-link,
-#migrated-site [data-name="row"] .row [data-name="gallery"] .gallery__image-link {
+.gallery__image-link {
     background-size: cover;
     background-position: center;
     display: block;
@@ -145,8 +141,7 @@
 }
 
 
-.gallery__image,
-#migrated-site [data-name="row"] .row [data-name="gallery"] .gallery__image {
+.gallery__image {
     display: none; // Using background image instead
 
     @media @mobile-650px {
@@ -155,14 +150,9 @@
 }
 
 
-.#migrated-site [data-name="row"] .row [data-name="gallery"] .gallery__caption {
-    background: transparent;
-}
-
 
 // Captions fade
-.gallery__caption-link,
-.#migrated-site [data-name="row"] .row [data-name="gallery"] .gallery__caption-link {
+.gallery__caption-link {
     position: absolute;
     top: 0;
     right: 0;
