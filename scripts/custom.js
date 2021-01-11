@@ -74,3 +74,13 @@ if(publishedmode==false) {
         });
     }, 5000);
 }
+
+function setHeaderHeight() {
+    const editorBody = document.body;
+    const header = document.querySelector('.template-header');
+    const headerHeight = window.getComputedStyle(header).getPropertyValue('height');
+    
+    editorBody.style.setProperty('--header-height', headerHeight);
+}
+
+window.setHeaderHeight();
