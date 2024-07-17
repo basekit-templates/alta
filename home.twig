@@ -1,17 +1,11 @@
 {% extends "layout.twig" %}
 {% block content %}
 
-
-<!-- Navigation Container -->
 <div class="template-feature  nav-effect--container  home-page">
 
-
-    <!-- Feature Containers -->
     <div class="template-feature--container  nav-effect--transform">
         <div class="template-feature--wrapper  nav-effect--wrapper">
 
-
-            <!-- Feature Widget -->
             {{widget('feature', 'header-feature', {
                 "header": "profile",
                 'positionTopPercentage': '0',
@@ -19,8 +13,6 @@
                 buttonText: "Lorem Ipsum"
             })|raw}}
 
-
-            <!-- Slideshow Widget -->
             {{widget('responsiveslideshow', 'slideshow', {
                 'duration':'5',
                 'transSpeed': '800',
@@ -30,17 +22,13 @@
                 'allowPause': false,
                 'allowLoop': false,
                 'crop': true,
-                'images':[
-            {
-                'imageHeight':'auto',
-                'imageWidth':'100%',
-                'url':asset('images/slideshow-1.jpg')
-            }
+                'images':[{
+                    'imageHeight':'auto',
+                    'imageWidth':'100%',
+                    'url':asset('images/slideshow-1.jpg')
+                }]
+            })|raw}}
 
-            ]})|raw}}
-
-
-            <!-- Header -->
              <header class="template-header">
                 <div class="template-header--brand">
                     {{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.svg'), "showTplWidget":"0"})|raw}}
@@ -50,29 +38,16 @@
                     {{widget('ecombasket', 'shopbasket', {})|raw}}
                 {% endif %}
             </header>
-
-
-
         </div>
     </div>
 
-
-    <!-- Navigation -->
     {{widget('extendednavigation', 'navigation', {'align': 'center'})|raw}}
-
 </div>
-
 
 <div role="main">
-
-    <!-- Main Zone -->
     {{zone('main')|raw}}
-
 </div>
-
 
 <!-- Footer -->
 {% include "includes/footer.twig" %}
-
-
 {% endblock %}
